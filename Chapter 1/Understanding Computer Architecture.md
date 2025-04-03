@@ -31,5 +31,4 @@ Computer Architecture refers to organization and design of a computer system, bo
 * **instruction set architecture (ISA)** are set of instructions that a CPU can execute
 * **Pipeline**: allows the CPU to begin executing a new instruction before the previous one has finished
 
-
 ---

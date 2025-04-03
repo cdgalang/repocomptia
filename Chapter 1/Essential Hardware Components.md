@@ -51,11 +51,16 @@
 ### Output Devices
 
 * present information to the user
-* Examples includes monitors, speakers, headphones
+* Examples includes monitors, speakers, headphones, printers
 
 ### Network Interface Cards (NICs)
 
 * enable communication with other devices on a network
+* **Switches**: central points within LAN linking multiple devices together
+* **Routers**: connecting different networks and directing traffic between them and functions at layer 3
+* **Wireless Access Points (WAPs)**: bridge the gap between wired and wireless networking.
+* **Modems**: gateway between digital networks and analog transmission systems like telephone and cable lines
+
 
 ### Expansion Cards
 
@@ -98,8 +103,29 @@
 * Redundant Array of Independent Disks
 * Combines multiple storage devices into a single logical unit
 
-    * RAID 0
-    * RAID 1
+    * RAID 0 (Striping)
+        * not fault tolerant
+        * data is not duplicated
+        * striped across two separate disks
+        * improves performance
+
+    * RAID 1 (Mirroring)
+        * fault tolerant
+        * copies on 2 disks
+        * provides redundancy
+        * failure on one drive does not result in data loss
+
     * RAID 5
+        * 3 or more disks
+        * common setup
+        * store a large amount of data
+        * not duplicated but striped to multiple drives
+        * good balance of performance, capacity and redundancy
+
     * RAID 10
+        * combines RAID 1 and 0
+        * requires 4 or more disks
+        * improved perforamnce and redundancy 
+        * benefits the fault tolerance of RAID 1 and the speed of RAID 0
+
     * RAID Controllers

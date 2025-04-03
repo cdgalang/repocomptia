@@ -6,6 +6,8 @@
 
 ## Chapter 2: Networking and Security Essentials
 
+### Network Topologies and Protocols, TCP/IP OSI Models, Wireless Technologies, Network Security Fundamentals, Firewalls, Antivirus, and Malware Protection, Physical Security and Access Control
+
 ## Chapter 3: Mobile Devices and IoT
 ## Chapter 4: Cloud Computing and Virtualization
 ## Chapter 5: Operating Systems and Software Troubleshoting

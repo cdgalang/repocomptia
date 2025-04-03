@@ -19,7 +19,14 @@
 ### Storage devices
 
 * Holds data permanently, even if the computer is turned off
-* Hard Disk Drives (HDDs), Solid State Drives (SSDs)
+* Hard Disk Drives (HDDs)
+    * uses magnetic platters to store data
+* Solid State Drives (SSDs)
+    * uses flash memory to store data
+* M.2 SSDs
+    * connects directly to motherboard
+
+
 
 ### Power Supply Unit (PSU)
 
@@ -64,6 +71,35 @@
 * contains firmware for booting process
 * runtime services for OS and programs
 
+* BIOS or Basic Input/Output Systems
+    * Key Functions of BIOS include:
+        * checks hardware components
+        * setup utility
+        * managing power states
+        * handling basic input/output operations
+
+* UEFI
+    * Successor to BIOS
+
+* Provides **setup utility** which allows user to configure various system
+
+* Firmware
+    * Type of software that provides low-level control for devices
+
+* Secure Boot
+    * UEFI feature which helps prevents unauthorized OS and malware from loading during booting process.
+
 ### CMOS battery
  
 * maintains system settings and the real time clock when computer is powered off
+
+# RAIDs
+
+* Redundant Array of Independent Disks
+* Combines multiple storage devices into a single logical unit
+
+    * RAID 0
+    * RAID 1
+    * RAID 5
+    * RAID 10
+    * RAID Controllers

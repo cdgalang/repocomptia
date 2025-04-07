@@ -7,7 +7,7 @@
 
 ---
 
-[Topology](C:\Users\naits\repocomptia\Chapter 2\topology.jpg)
+[Topology](https://github.com/cdgalang/repocomptia/blob/main/Chapter%202/topology.jpg)
 
 * Bus Topology
     * all devices are conencted to a single cable

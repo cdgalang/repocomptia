@@ -76,6 +76,6 @@
 
 * **Domain Name Server**
     * Translates human readable names to IP addresses
-    
 
+---
 

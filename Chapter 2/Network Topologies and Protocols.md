@@ -35,3 +35,47 @@
     * combination of different topologies
 
 ---
+
+### Protocols
+
+* set of rules that govern how data is transmitted between devices on a network
+
+---
+
+* **Ethernet**
+    * widely used protocol for LAN
+    * defines the physical and data link layers of OSI model
+
+* **Internet Protocol**
+    * foundation of internet
+    * addressing and routing packets
+    * IPv4 and IPv6
+
+* **Transmission Control Protocol**
+    * works with IP to ensure reliable delivery of data
+    * establishes connections, handles error checking and manages flow
+
+* **User Datagram Protocol** 
+    * connectionless
+    * does not guarantee delivery or order of packets
+    * faster than TCP
+    * used in video streaming and gaming where speed is priority than reliability
+
+* **Hypertext Transfer Protocol**
+    * foundation of data communication on WWW
+    * HTTPS is the secure version, that used encryption
+
+* **Simple Mail Transfer Protocol**
+    * sending email between servers
+
+* **File Transfer Protocol**
+    * transfer Files between client and server
+
+* **Dynamic Host Configuration Protocol**
+    * assigns IP addresses automatically
+
+* **Domain Name Server**
+    * Translates human readable names to IP addresses
+    
+
+

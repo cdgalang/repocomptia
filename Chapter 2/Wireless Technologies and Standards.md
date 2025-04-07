@@ -46,3 +46,12 @@
 * used in home automation and industrial settings
 * operates in the 2.4, 915, and 868 MHz bands
 * ability to form mesh networks
+
+*Notes to consider*
+* Several factors when implementing wireless networks
+    * Security
+    * Interference
+    * Power Consumption
+    * Latency
+    * Range
+    * Bandwidth

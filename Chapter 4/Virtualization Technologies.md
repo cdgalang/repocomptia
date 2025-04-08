@@ -19,7 +19,7 @@
 
 * **Hardware Virtualization**: relies on hardware features to improve virtualization performance and security
 
-* **Network Virtualization**: allowing creationg of virtual networks enables features such as VLANs, VPNs and SDN 
+* **Network Virtualization**: allowing creation of virtual networks enables features such as VLANs, VPNs and SDN 
 
 * **Storage Virtualization**: allowing creating of virtual storage pools that can be allocated to VMs and enables feature such as snapshots, and storage replication
 

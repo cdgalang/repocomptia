@@ -19,6 +19,16 @@ Key characteristics of IaaS:
 
 ### Platform as a Service (Paas)
 * provides a platform for developing, running and managing apps without managing the underlying infrastructure.
+* allows developers to focus on writing code
+* support multiple language and framework
+* scalability and availability, ensures high availibity and performance
+* reduced management overhead, so cloud provider will manage the infrastructure
+* customer is responsible for developing, deploying and managing applications
+* Uses in web application development such as manaing web servers, databases, and other components
+* mobile application development, providing backend services like data storage and user authentication
+* API development
+* Business analytics: can be used to analyze large datasets, processing, visualization and reporting
+
 
 
 

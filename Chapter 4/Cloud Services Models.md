@@ -18,6 +18,7 @@ Key characteristics of IaaS:
 * Disaster Recovery
 
 ### Platform as a Service (Paas)
+Key characteristics of PaaS:
 * provides a platform for developing, running and managing apps without managing the underlying infrastructure.
 * allows developers to focus on writing code
 * support multiple language and framework
@@ -29,8 +30,16 @@ Key characteristics of IaaS:
 * API development
 * Business analytics: can be used to analyze large datasets, processing, visualization and reporting
 
-
-
-
-
 ### Software as a Service (SaaS)
+Key Characteristics of SaaS:
+* delivers software apps to the internet
+* has suscription basis
+* can access software applications from any device
+* no installation
+* automatic updates
+* highly scalable and available
+* Customer relationship management
+* email collaboration such as Microsoft 365 and Google Workspace
+* Office Productivity
+* Human Resource Management
+* Accounting and finance

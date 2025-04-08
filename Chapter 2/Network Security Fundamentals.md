@@ -18,3 +18,5 @@ Definitions
 * **Physical Security**: protects network infrastructure from physical access
 * **Disaster recovery and business continuity planning**: restoration of network services after a security incident and disruption
 * **Compliance Requirements**: specific security measures that organizations must implement
+
+---

@@ -24,3 +24,12 @@ Features of Switches
 - can do everything a layer 2 switch does and includes routing
 - IP address used
 - can route traffic between different VLANs or subnets.
+
+
+|Feature|Layer 2 Switch|Layer 3 Switch|
+|-------|--------------|--------------|
+|Works at OSI layer|Data link Layer|Layer 2 + 3|
+|can route between VLANs| No | MAC + IP addresses|
+|Best for|Small LANs|Larger networks with multiple VLANs/subnets|
+|Analogy|Mail sorter in one building| Mail sorter + post office that connects building|
+

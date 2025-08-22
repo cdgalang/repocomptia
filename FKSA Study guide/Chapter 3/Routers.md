@@ -22,4 +22,18 @@
 - Internet is the biggest WAN
 
 
+### NAT
+
+- Network Address Translation
+- lets multiple private IP devices share one public IP.
+- adds security to networks.
+
+
+### Static vs Dynamic Routing
+
+- Static routing is manually telling the router to reach a network
+- Dynamic routing is automatic using routing protocols.
+- Dynamic is better because if one path fails, the router finds a new one. 
+- Routing protocols includes, RIP, OSPF, BGP, etc.
+
 

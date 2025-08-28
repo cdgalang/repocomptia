@@ -226,3 +226,70 @@ tshark -r file.pcap -Y http.request -T fields -e http.host  | sort | uniq -c | s
 # Count by TCP stream
 tshark -r file.pcap -Y tcp -T fields -e tcp.stream  | sort -n | uniq -c | sort -nr | head
 ```
+
+---
+
+# Statistics & “follow” with `-z`
+
+**Tip:** Use `-q` to suppress per-packet output so only stats print. You can also scope stats with a display filter via `-Y "..."`.
+
+## Protocol Hierarchy (like Wireshark’s *Statistics → Protocol Hierarchy*)
+```bash
+# Overall protocol breakdown (packets/bytes, per layer)
+tshark -r file.pcap -q -z io,phs
+
+# Scoped to one host
+tshark -r file.pcap -q -Y "ip.addr==10.0.0.5" -z io,phs
+```
+
+## Time‑bucketed I/O stats (`io,stat`)
+```bash
+# 1‑second buckets: total frames, TCP frames, UDP frames
+tshark -r file.pcap -q -z "io,stat,1,COUNT,COUNT(tcp),COUNT(udp)"
+
+# 5‑second buckets: total bytes per bucket and HTTP request count
+tshark -r file.pcap -q -z "io,stat,5,SUM(frame.len),COUNT(http.request)"
+
+# SYNs per second (no ACK set) – quick scan detector
+tshark -r file.pcap -q -z "io,stat,1,COUNT(tcp.flags.syn==1 && tcp.flags.ack==0)"
+```
+> Functions include `COUNT(<filter>)`, `SUM(field)`, `MIN(field)`, `MAX(field)`, `AVG(field)`. A plain `COUNT` (without filter) counts **all** frames per bucket.
+
+## Conversations (`conv`)
+```bash
+# Top talkers by conversation (pairs), frames/bytes both directions
+tshark -r file.pcap -q -z conv,ip
+tshark -r file.pcap -q -z conv,tcp
+tshark -r file.pcap -q -z conv,udp
+
+# Limit to a host, then summarize TCP conversations
+tshark -r file.pcap -q -Y "ip.addr==10.0.0.5" -z conv,tcp
+```
+
+## Endpoints (per address totals)
+```bash
+tshark -r file.pcap -q -z endpoints,ip
+tshark -r file.pcap -q -z endpoints,ipv6
+tshark -r file.pcap -q -z endpoints,eth
+```
+
+## Expert Info (errors, warnings, notable events)
+```bash
+tshark -r file.pcap -q -z expert
+```
+> Handy for spotting malformed packets, retransmissions (also see `tcp.analysis.*`), protocol errors, etc.
+
+## Follow TCP Stream (reassembled payload)
+```bash
+# Find stream index for a packet of interest
+tshark -r file.pcap -Y "frame.number==123 && tcp" -T fields -e tcp.stream
+
+# ASCII view of reassembled data for that stream
+tshark -r file.pcap -q -z "follow,tcp,ascii,7"
+
+# Hex or raw bytes
+tshark -r file.pcap -q -z "follow,tcp,hex,7"
+tshark -r file.pcap -q -z "follow,tcp,raw,7" > stream7.raw
+```
+> Tip: Combine with TLS keys to decrypt before following:  
+> `tshark -r file.pcap -o tls.keylog_file:/path/keys.log -q -z "follow,tcp,ascii,7"`
